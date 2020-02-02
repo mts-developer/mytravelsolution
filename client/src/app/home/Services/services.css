@@ -13,17 +13,13 @@
 
 .servicesgrid__box {
   flex-grow: 1;
-  height: 200px;
+  height: 100px;
   width: 250px;
-  /* border-radius: 3px; */
+
   transition: 0.3s ease;
 }
 
 @media (min-width: 992px) {
-  .services-container {
-    /* width: 80%; */
-  }
-
   .servicesgrid__box {
     width: 400px;
   }
