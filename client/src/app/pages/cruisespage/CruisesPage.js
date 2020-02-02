@@ -9,7 +9,8 @@ import logos from "../../assets/images/logos";
 import cruiseLineLogos from "../../assets/images/logos/cruise_lines";
 import backgrounds from "../../assets/images/bg";
 
-const CruisesPage = () => {
+const CruisesPage = props => {
+  const { clickBookingEngine } = props;
   const sliderLogos = Object.values(cruiseLineLogos);
   return (
     <PageWrapper
@@ -29,7 +30,13 @@ const CruisesPage = () => {
       <div className="featuredflightspage-container margin-bottom-50">
         <Carousel>
           {cruises.map((cruise, i) => {
-            return <CruiseCard key={i} cruise={cruise} />;
+            return (
+              <CruiseCard
+                key={i}
+                cruise={cruise}
+                clickBookingEngine={clickBookingEngine}
+              />
+            );
           })}
         </Carousel>
       </div>

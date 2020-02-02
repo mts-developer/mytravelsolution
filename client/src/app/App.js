@@ -1,4 +1,5 @@
 import React from "react";
+import LinkButton from "./components/Buttons/LinkButton";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./app.css";
 import { ThemeProvider } from "@material-ui/styles";
@@ -39,7 +40,21 @@ class App extends React.Component {
         action={this.clickBookingEngine}
         open={this.state.openBookingEngine}
       >
-        <div className="center padding-20">/ Sabre Booking Engine /</div>
+        <div
+          className="center padding-20 bold"
+          style={{ display: "flex", flexDirection: "column" }}
+        >
+          <p style={{ paddingBottom: "20px" }}>
+            For all bookings and enquiries, please call our office.
+          </p>
+          <LinkButton
+            label="Call Us Now"
+            width="90px"
+            url={`tel:0393146957`}
+            external
+            color="primary"
+          />
+        </div>
       </Dialog>
     );
   };
@@ -73,7 +88,15 @@ class App extends React.Component {
                 />
                 <Route path="/hotels" component={HotelsPage} />
                 <Route path="/rentals" component={RentalsPage} />
-                <Route path="/cruises" component={CruisesPage} />
+                <Route
+                  path="/cruises"
+                  render={props => (
+                    <CruisesPage
+                      {...props}
+                      clickBookingEngine={clickBookingEngine}
+                    />
+                  )}
+                />
                 <Route path="/tours" component={ToursPage} />
                 <Route path="/insurance" component={InsurancePage} />
                 <Route path="/rail" component={RailPage} />

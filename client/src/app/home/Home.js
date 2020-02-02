@@ -71,7 +71,7 @@ class Home extends React.Component {
             title="Featured Cruises"
             description="Discover a selection of My Travel Solution's premium and luxury cruises"
           >
-            <FeaturedCruises />
+            <FeaturedCruises clickBookingEngine={clickBookingEngine} />
           </Featured>
         </section>
         <section className="visa-section">

@@ -24,7 +24,7 @@ const visaLinkFacts = [
 
 const Visa = () => {
   return (
-    <div className="visa padding-20">
+    <div className="visa padding-20" style={{ paddingTop: "80px" }}>
       <div className="center row wrap">
         <div className="visa-left column">
           <h2 className="font--large bold primary-color margin-none">

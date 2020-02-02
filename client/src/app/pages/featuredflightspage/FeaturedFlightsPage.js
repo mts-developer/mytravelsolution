@@ -55,9 +55,15 @@ class FeaturedFlightsPage extends React.Component {
     } else {
       let selectedRegion = toTitleCase(this.state.selectedRegion);
       return (
-        <p className="font--large font--center bold padding-20">
-          {`Sorry, there are currently no specials for ${selectedRegion} at the moment.`}
-        </p>
+        <div className="font--center">
+          <p className="font--large bold padding-20">
+            {`There are currently no specials for ${selectedRegion} at the moment.`}
+          </p>
+          <p>
+            We are constantly updating our flights list, so please check again
+            soon.
+          </p>
+        </div>
       );
     }
   };

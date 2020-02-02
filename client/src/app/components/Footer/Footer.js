@@ -21,7 +21,7 @@ const Footer = () => {
           <Sitemap
             facebookLabel="Like Us"
             facebookIcon={icons.fb_white_svg}
-            facebookUrl="fb://page/mytravelsolutionau/"
+            facebookUrl="https://www.facebook.com/mytravelsolutionau/"
           />
         </div>
       </div>

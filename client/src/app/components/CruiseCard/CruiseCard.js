@@ -1,10 +1,10 @@
 import React from "react";
 import "./cruisecard.css";
-import LabelLinkButton from "../Buttons/LabelLinkButton";
 import { toTitleCase, commaFormatNumbers } from "../../utils";
+import LabelActionButton from "../Buttons/LabelActionButton";
 
 const CruiseCard = props => {
-  const { cruise } = props;
+  const { cruise, clickBookingEngine } = props;
 
   const name = toTitleCase(cruise.name);
   const featuredImage = cruise.featuredImage;
@@ -83,7 +83,10 @@ const CruiseCard = props => {
           </div>
           <div className="padding-y-20 space-between row middle">
             <p className="font--small light-grey bold">* Conditions Apply</p>
-            <LabelLinkButton label="Learn More" />
+            <LabelActionButton
+              label="Learn More"
+              onClick={e => clickBookingEngine(e)}
+            />
           </div>
         </div>
       </div>

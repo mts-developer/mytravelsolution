@@ -25,7 +25,7 @@ const ServiceEnquiry = props => {
         Tired of waiting in line?
       </h1>
       <p className="font--center margin-20">
-        Skip the service queue and get an emailed copy of all your enquiry
+        Skip the telephone queue and get an emailed copy of all your enquiry
         details. Simply fill in the form below.
       </p>
       <SimpleEnquiryForm />

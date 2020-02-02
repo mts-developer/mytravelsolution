@@ -11,7 +11,7 @@ body {
   --white: #ffffff;
   --off-white: #f6f9fc;
   --red: #d90000;
-  --black-transparent: #00000098;
+  --black-transparent: #000000d2;
   --transparent: #00000000;
 }
 
@@ -435,19 +435,15 @@ hr {
 }
 
 .button-color-primary {
-  background: linear-gradient(
-    45deg,
-    var(--primary-color) 30%,
-    var(--primary-color-light) 100%
-  );
+  background: linear-gradient(45deg,
+      var(--primary-color) 30%,
+      var(--primary-color-light) 100%);
 }
 
 .button-color-secondary {
-  background: linear-gradient(
-    45deg,
-    var(--secondary-color) 30%,
-    var(--secondary-color-light) 100%
-  );
+  background: linear-gradient(45deg,
+      var(--secondary-color) 30%,
+      var(--secondary-color-light) 100%);
 }
 
 /* Cursors */
@@ -501,6 +497,7 @@ hr {
 /* Media Queries */
 
 @media (min-width: 768px) {
+
   .mobile,
   .desktop {
     display: none;

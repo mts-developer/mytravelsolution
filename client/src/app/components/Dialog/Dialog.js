@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./dialog.css";
 import logos from "../../assets/images/logos";
 import icons from "../../assets/images/icons";
@@ -13,11 +14,13 @@ const Dialog = props => {
     >
       <div className="padding-20">
         <div className="space-between middle">
-          <img
-            className="logo--small"
-            src={logos.mts_logo_full}
-            alt="MTS Logo Full"
-          />
+          <Link to="/">
+            <img
+              className="logo--small"
+              src={logos.mts_logo_full}
+              alt="MTS Logo Full"
+            />
+          </Link>
           <div className="row">
             <a className="button-padding" href="tel:0393146957">
               <img

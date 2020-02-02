@@ -22,9 +22,6 @@ const Hero = props => {
             <h1 className="white font--title bold font-shadow margin-none">
               Your journey begins
             </h1>
-            <h2 className="white font--large thin margin-none margin-top-5">
-              Discover the world today
-            </h2>
           </div>
           <div className="column padding-top-20">
             <ActionButton

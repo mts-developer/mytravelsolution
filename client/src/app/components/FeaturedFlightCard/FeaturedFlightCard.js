@@ -13,12 +13,13 @@ import {
 const FeaturedFlightCard = props => {
   const { clickBookingEngine, flight } = props;
 
-  const expiry = dateFormatLongMonthDay(flight.expiry);
+  const expiry =
+    flight.expiry !== null ? dateFormatLongMonthDay(flight.expiry) : null;
   const name = toTitleCase(flight.name);
   const featuredImage = flight.featuredImage;
   const airline = flight.airline;
-  const origin = flight.origin.toUpperCase();
-  const destination = flight.destination.toUpperCase();
+  const origin = flight.origin;
+  const destination = flight.destination;
   var returnFlight =
     flight.returnFlight === true
       ? // eslint-disable-next-line
@@ -36,11 +37,13 @@ const FeaturedFlightCard = props => {
 
   return (
     <div className="featuredflightcard column center card-shadow">
-      <div className="featuredflightcard-expiry center">
-        <h2 className="font--medium white bold">
-          {`Offer valid until ${expiry}`}
-        </h2>
-      </div>
+      {expiry !== null ? (
+        <div className="featuredflightcard-expiry center">
+          <h2 className="font--medium white bold">
+            {`Offer valid until ${expiry}`}
+          </h2>
+        </div>
+      ) : null}
       <div className="featuredflightcard-title font--center center middle">
         <h2 className="font--large white bold">{name}</h2>
       </div>
@@ -49,14 +52,17 @@ const FeaturedFlightCard = props => {
         <div className="padding-20">
           <div className="center">
             <img
-              className="logo--small margin-10"
+              className="logo--small margin-20"
               src={airline.airlineImage}
               alt={airline.airlineName}
             />
           </div>
           <div className="featuredflightcard-grid grid-columns-2 full-width">
             <div>
-              <p className="font--large primary-color bold">{`${origin} - ${destination} ${returnFlight}`}</p>
+              <p className="font--large primary-color bold">{`${origin} to`}</p>
+              <p className="font--large primary-color bold">{`${destination} ${returnFlight}`}</p>
+              <br />
+
               <div className="row margin-top-5">
                 <p className="font--small bold">from</p>
                 <p className="font--header bold margin-x-5">{`$${price}*`}</p>
@@ -77,7 +83,7 @@ const FeaturedFlightCard = props => {
               })}
             </div>
           </div>
-          <div className="featuredflightcard-remarks">
+          <div className="featuredflightcard-remarks padding-top-20">
             {remarks.map((remark, i) => {
               return (
                 <p key={i} className="font--small light-grey padding-y-5">

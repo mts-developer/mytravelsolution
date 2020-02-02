@@ -6,7 +6,7 @@ import logos from "../../assets/images/logos/airlines";
 
 const flights = [
   {
-    expiry: "2019-05-31",
+    expiry: null,
     name: "Cebu Pacific Sale",
     featuredImage: featureImages.philippines_1,
     airline: {
@@ -15,51 +15,39 @@ const flights = [
       airlineImage: logos.cebu_pacific_logo
     },
     region: "asia",
-    origin: "MEL",
-    destination: "MNL",
+    origin: "Melbourne",
+    destination: "Manila",
     returnFlight: true,
-    price: 310,
+    price: 469,
     travelPeriods: [
       {
-        from: "2019-07-01",
-        to: "2019-11-30"
-      },
-      {
-        from: "2020-01-13",
-        to: "2020-02-29"
+        from: "2020-02-01",
+        to: "2020-06-01"
       }
     ],
-    remarks: [
-      "Base fare only",
-      "SYD to MNL also available",
-      "Subject to availability"
-    ]
+    remarks: ["Subject to availability", "Black out periods apply"]
   },
   {
     expiry: "2019-06-08",
-    name: "Midyear seat sale",
+    name: "Qantas Sale",
     featuredImage: featureImages.philippines_2,
     airline: {
-      airlineName: "Philippine Airlines",
-      airlineCode: "PR",
-      airlineImage: logos.philippine_airlines_logo
+      airlineName: "Qantas",
+      airlineCode: "QF",
+      airlineImage: logos.qantas_logo
     },
     region: "asia",
-    origin: "MEL",
-    destination: "MNL",
+    origin: "Melbourne",
+    destination: "Manila",
     returnFlight: true,
-    price: 589,
+    price: 719,
     travelPeriods: [
       {
         from: "2019-07-07",
         to: "2019-11-30"
       }
     ],
-    remarks: [
-      "MNL & beyond also available",
-      "SYD to MNL also available",
-      "Black out periods apply"
-    ]
+    remarks: ["Subject to availability", "Black out periods apply"]
   },
   {
     expiry: "2019-05-31",
