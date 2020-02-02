@@ -41,11 +41,12 @@ class App extends React.Component {
         open={this.state.openBookingEngine}
       >
         <div
-          className="center padding-20 bold"
+          className="font--center center padding-20 bold"
           style={{ display: "flex", flexDirection: "column" }}
         >
           <p style={{ paddingBottom: "20px" }}>
-            For all bookings and enquiries, please call our office.
+            For all bookings and enquiries, please call our office on 03 9314
+            6957.
           </p>
           <LinkButton
             label="Call Us Now"
