@@ -6,7 +6,8 @@ import backgrounds from "../../assets/images/bg";
 import tours from "../../components/Tours";
 import logos from "../../assets/images/logos";
 
-const ToursPage = () => {
+const ToursPage = props => {
+  const clickBookingEngine = props.clickBookingEngine;
   return (
     <PageWrapper
       title="Tours & Packaged Deals"
@@ -19,7 +20,7 @@ const ToursPage = () => {
         </div>
         {tours.map((tour, i) => (
           <div key={i} className="padding-10">
-            <TourCard tour={tour} />
+            <TourCard tour={tour} clickBookingEngine={clickBookingEngine} />
           </div>
         ))}
       </div>

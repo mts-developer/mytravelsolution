@@ -97,7 +97,15 @@ class App extends React.Component {
                     />
                   )}
                 />
-                <Route path="/tours" component={ToursPage} />
+                <Route
+                  path="/tours"
+                  render={props => (
+                    <ToursPage
+                      {...props}
+                      clickBookingEngine={clickBookingEngine}
+                    />
+                  )}
+                />
                 <Route path="/insurance" component={InsurancePage} />
                 <Route path="/rail" component={RailPage} />
                 <Route path="*" component={PageNotFound} />

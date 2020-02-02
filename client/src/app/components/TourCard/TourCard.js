@@ -1,10 +1,10 @@
 import React from "react";
 import "./tourcard.css";
-import LabelLinkButton from "../Buttons/LabelLinkButton";
 import { toTitleCase, commaFormatNumbers } from "../../utils";
+import LabelActionButton from "../Buttons/LabelActionButton";
 
 const TourCard = props => {
-  const { tour } = props;
+  const { tour, clickBookingEngine } = props;
 
   const name = toTitleCase(tour.name);
   const description = tour.description;
@@ -81,7 +81,10 @@ const TourCard = props => {
               price
             )}`}</p>
           </div>
-          <LabelLinkButton label="Learn more" />
+          <LabelActionButton
+            label="Learn more"
+            onClick={e => clickBookingEngine(e)}
+          />
         </div>
       </div>
     </div>

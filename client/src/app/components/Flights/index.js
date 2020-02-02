@@ -43,59 +43,11 @@ const flights = [
     price: 719,
     travelPeriods: [
       {
-        from: "2019-07-07",
-        to: "2019-11-30"
+        from: "2020-02-01",
+        to: "2020-08-01"
       }
     ],
     remarks: ["Subject to availability", "Black out periods apply"]
-  },
-  {
-    expiry: "2019-05-31",
-    name: "Royal Brunei Special",
-    featuredImage: featureImages.philippines_3,
-    airline: {
-      airlineName: "Royal Brunei Airlines",
-      airlineCode: "BI",
-      airlineImage: logos.royal_brunei_logo
-    },
-    region: "asia",
-    origin: "MEL",
-    destination: "MNL",
-    returnFlight: true,
-    price: 585,
-    travelPeriods: [
-      {
-        from: "2019-08-30",
-        to: "2019-11-30"
-      }
-    ],
-    remarks: ["Subject to availability"]
-  },
-  {
-    expiry: "2019-06-30",
-    name: "Philippine Airlines Special",
-    featuredImage: featureImages.philippines_4,
-    airline: {
-      airlineName: "Philippine Airlines",
-      airlineCode: "PR",
-      airlineImage: logos.philippine_airlines_logo
-    },
-    region: "asia",
-    origin: "MEL",
-    destination: "MNL",
-    returnFlight: true,
-    price: 545,
-    travelPeriods: [
-      {
-        from: "2019-07-16",
-        to: "2020-03-31"
-      }
-    ],
-    remarks: [
-      "DEC to JAN 2020 not available",
-      "Blackout periods apply",
-      "Subject to availability"
-    ]
   }
 ];
 
