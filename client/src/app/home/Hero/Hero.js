@@ -20,7 +20,7 @@ const Hero = props => {
         <div className="responsive-width">
           <div className="margin-top-20">
             <h1 className="white font--title bold font-shadow margin-none">
-              Your journey begins
+              Your travel journey begins with us
             </h1>
           </div>
           <div className="column padding-top-20">
@@ -29,11 +29,6 @@ const Hero = props => {
               label="Book Your Flight Now"
               width="160px"
             />
-            <p className="hero__hours-text white font--small">
-              Or call our office 7 days a week
-              <br />
-              from 9-6pm.
-            </p>
           </div>
         </div>
       </div>

@@ -7,7 +7,6 @@ import FeaturedFlightCard from "../../components/FeaturedFlightCard";
 import Slider from "../../components/Slider";
 import Carousel from "../../components/Carousel";
 import flights from "../../components/Flights";
-import logos from "../../assets/images/logos";
 import airlineLogos from "../../assets/images/logos/airlines";
 import backgrounds from "../../assets/images/bg";
 import { toTitleCase } from "../../utils";
@@ -89,7 +88,6 @@ class FeaturedFlightsPage extends React.Component {
           <Slider logos={sliderLogos} component="flights" />
         </div>
         <div className="center column padding-20">
-          <img className="logo--medium" src={logos.mts_logo} alt="MTS Logo" />
           <div className="padding-20">
             <TextField
               select
