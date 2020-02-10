@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./home.css";
 import Hero from "./Hero";
 import Featured from "./Featured";
 import FeaturedFlights from "./Featured/FeaturedFlights";
-import FeaturedCruises from "./Featured/FeaturedCruises";
 import Services from "./Services";
 import Visa from "./Visa";
 import Footer from "../components/Footer";
+import ActionButton from "../components/Buttons/ActionButton";
 import Subscribe from "../components/Subscribe";
 import Dialog from "../components/Dialog";
 
@@ -69,9 +70,13 @@ class Home extends React.Component {
             topPadding="padding-top-50"
             bottomPadding="padding-bottom-50"
             title="Featured Cruises"
-            description="Discover a selection of My Travel Solution's premium and luxury cruises"
+            description="Coming soon to My Travel Solution"
           >
-            <FeaturedCruises clickBookingEngine={clickBookingEngine} />
+            <span style={{ display: "flex", justifyContent: "center" }}>
+              <Link to="/cruises">
+                <ActionButton label="Enquire Now" url />
+              </Link>
+            </span>
           </Featured>
         </section>
         <section className="visa-section">
