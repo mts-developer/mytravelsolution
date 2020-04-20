@@ -5,19 +5,15 @@ const quickLinks = [
   },
   {
     label: "Terms & Conditions",
-    url: "http://localhost:3000"
+    url: "/termsandconditions"
   },
   {
     label: "Privacy Policy",
-    url: "http://localhost:3000"
+    url: "/privacypolicy"
   },
   {
-    label: "Checklist & Notes",
-    url: "http://localhost:3000"
-  },
-  {
-    label: "Refund Policy",
-    url: "http://localhost:3000"
+    label: "About Us",
+    url: "/aboutus"
   }
 ];
 

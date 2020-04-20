@@ -15,6 +15,9 @@ import ToursPage from "./pages/tourspage";
 import InsurancePage from "./pages/insurancepage";
 import RailPage from "./pages/railpage";
 import PageNotFound from "./pages/pagenotfound";
+import TermsAndConditionsPage from "./pages/static/termsandconditionspage";
+import PrivacyPolicyPage from "./pages/static/privacypolicypage";
+import AboutUsPage from "./pages/static/aboutuspage";
 import ScrollToTop from "./components/ScrollToTop";
 
 class App extends React.Component {
@@ -109,6 +112,13 @@ class App extends React.Component {
                 />
                 <Route path="/insurance" component={InsurancePage} />
                 <Route path="/rail" component={RailPage} />
+                {/* Static Pages */}
+                <Route
+                  path="/termsandconditions"
+                  component={TermsAndConditionsPage}
+                />
+                <Route path="/privacypolicy" component={PrivacyPolicyPage} />
+                <Route path="/aboutus" component={AboutUsPage} />
                 <Route path="*" component={PageNotFound} />
               </Switch>
             </ThemeProvider>

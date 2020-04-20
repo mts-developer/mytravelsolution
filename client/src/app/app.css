@@ -3,6 +3,7 @@
 body {
   --primary-color: #5800ff;
   --primary-color-light: #00cbff;
+  --primary-color-transparent: #5800ffd2;
   --secondary-color: #b914cc;
   --secondary-color-transparent: #b914cca1;
   --secondary-color-light: #ff00f6;
@@ -67,11 +68,13 @@ p {
   color: var(--dark-grey);
 }
 
-ul:first-child {
+ul:first-child,
+ol:first-child {
   margin: 0;
 }
 
-ul {
+ul,
+ol {
   padding: 0;
   margin: 0;
 }
@@ -131,6 +134,10 @@ hr {
 
 .wrap {
   flex-wrap: wrap;
+}
+
+.inline-flex {
+  display: inline-flex;
 }
 
 /* Spacers */
@@ -197,6 +204,10 @@ hr {
 
 .margin-y-20 {
   margin: 20px 0;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
 }
 
 .margin-50 {
@@ -365,6 +376,14 @@ hr {
 
 .font--center {
   text-align: center;
+}
+
+.font--justify {
+  text-align: justify;
+}
+
+.font--right {
+  text-align: right;
 }
 
 .bold {

@@ -8,7 +8,7 @@ import colors from "../../themes/colors";
 const PageWrapper = props => {
   const { title, description, backgroundImage } = props;
   const style = {
-    background: `linear-gradient(var(--black-transparent) 10%, var(--transparent) 50%), url(${backgroundImage})`,
+    background: `linear-gradient(var(--primary-color-transparent) 10%, var(--transparent) 50%), url(${backgroundImage})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover"
@@ -24,9 +24,11 @@ const PageWrapper = props => {
               <h1 className="white font--title bold font-shadow margin-none padding-top-20">
                 {title}
               </h1>
-              <h2 className="page-wrapper__description white font--large thin margin-top-5 padding-5">
-                {description}
-              </h2>
+              {description !== "No Description" ? (
+                <h2 className="page-wrapper__description white font--large thin margin-top-5 padding-5">
+                  {description}
+                </h2>
+              ) : null}
             </div>
           </div>
         </div>
@@ -40,7 +42,7 @@ const PageWrapper = props => {
 
 PageWrapper.defaultProps = {
   title: "Page Title",
-  description: "Page description"
+  description: "No Description"
 };
 
 export default PageWrapper;
