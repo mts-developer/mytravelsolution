@@ -172,15 +172,26 @@ class SimpleEnquiryForm extends React.Component {
             Fields marked with * are required
           </p>
           <a
-            href={`mailto:bookings@mytravelsolution.com.au?cc=${email}&subject=MTS%20Email%20Enquiry%20Sample&body=Email%20Address%3A%0A${email}%0A%0AFull%20Name%3A%0A${fullName}%0A%0AContact%20Number%3A%0A${contact}%0A%0ATravelling%20To%3A%0A${destination}%0A%0ATravel%20Dates%3A%0A${
-              travelDates.from
-            }%20to%20${
-              travelDates.to
-            }%0A%0AContact%20Preference%3A%0AEmail%3A%20${
-              replyPreference.email
-            }%0AContact%3A%20${
-              replyPreference.contact
-            }%0A%0ARemarks%3A%0A${comments}`}
+            href={`mailto:bookings@mytravelsolution.com.au?cc=
+            ${email}
+            &subject=MTS%20Email%20Enquiry%20Sample&body=Email%20Address%3A%0A
+            ${email}
+            %0A%0AFull%20Name%3A%0A
+            ${fullName}
+            %0A%0AContact%20Number%3A%0A
+            ${contact}
+            %0A%0ATravelling%20To%3A%0A
+            ${destination}
+            %0A%0ATravel%20Dates%3A%0A
+            ${travelDates.from}
+            %20to%20
+            ${travelDates.to}
+            %0A%0AContact%20Preference%3A%0AEmail%3A%20
+            ${replyPreference.email ? 'Yes' : 'No'}
+            %0AContact%3A%20
+            ${replyPreference.contact ? 'Yes' : 'No'}
+            %0A%0AComments%3A%0A
+            ${comments}`}
           >
             <ActionButton label="Send" width="80px" />
           </a>
