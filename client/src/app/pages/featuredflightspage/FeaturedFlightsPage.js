@@ -1,8 +1,6 @@
 import React from "react";
 import "./featuredflightspage.css";
 import PageWrapper from "../../components/PageWrapper";
-import MenuItem from "@material-ui/core/MenuItem";
-import TextField from "@material-ui/core/TextField";
 import FeaturedFlightCard from "../../components/FeaturedFlightCard";
 import ServiceEnquiry from "../../components/ServiceEnquiry"
 import Slider from "../../components/Slider";
@@ -69,11 +67,6 @@ class FeaturedFlightsPage extends React.Component {
   };
 
   render() {
-    const filteredFlights = this.filteredFlights();
-    const selectedRegion = this.state.selectedRegion;
-    const style = {
-      width: "250px"
-    };
     const sliderLogos = Object.values(airlineLogos);
 
     return (
@@ -92,29 +85,6 @@ class FeaturedFlightsPage extends React.Component {
           contactNumber="03 9314 6957"
           service="Airfares & Featured Flights"
         />
-        {/* <div className="center column padding-20">
-          <div className="padding-20">
-            <TextField
-              select
-              label="Where are you going?"
-              value={selectedRegion}
-              style={style}
-              onChange={this.handleRegion("region")}
-            >
-              {this.regions.map((region, i) => (
-                <MenuItem key={i} value={region} style={style}>
-                  {toTitleCase(region)}
-                </MenuItem>
-              ))}
-            </TextField>
-          </div>
-        </div>
-        <h1 className="center font--header primary-color bold">
-          {toTitleCase(selectedRegion)}
-        </h1>
-        <div className="featuredflightspage-container margin-bottom-50">
-          {filteredFlights}
-        </div> */}
       </PageWrapper>
     );
   }

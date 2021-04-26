@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./home.css";
 import Hero from "./Hero";
 import Featured from "./Featured";
-import FeaturedFlights from "./Featured/FeaturedFlights";
 import Services from "./Services";
 import Visa from "./Visa";
 import Footer from "../components/Footer";
