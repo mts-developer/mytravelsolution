@@ -57,9 +57,13 @@ class Home extends React.Component {
           <Featured
             bottomPadding="padding-bottom-50"
             title="Featured Flights"
-            description="See My Travel Solution's range of great value flights"
+            description="Coming soon to My Travel Solution"
           >
-            <FeaturedFlights clickBookingEngine={clickBookingEngine} />
+            <span style={{ display: "flex", justifyContent: "center" }}>
+              <Link to="/featured-flights">
+                <ActionButton label="Enquire Now" url />
+              </Link>
+            </span>
           </Featured>
         </section>
         <section className="services-section">

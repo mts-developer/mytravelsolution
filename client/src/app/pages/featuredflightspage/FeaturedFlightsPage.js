@@ -4,6 +4,7 @@ import PageWrapper from "../../components/PageWrapper";
 import MenuItem from "@material-ui/core/MenuItem";
 import TextField from "@material-ui/core/TextField";
 import FeaturedFlightCard from "../../components/FeaturedFlightCard";
+import ServiceEnquiry from "../../components/ServiceEnquiry"
 import Slider from "../../components/Slider";
 import Carousel from "../../components/Carousel";
 import flights from "../../components/Flights";
@@ -87,7 +88,11 @@ class FeaturedFlightsPage extends React.Component {
           </h2>
           <Slider logos={sliderLogos} component="flights" />
         </div>
-        <div className="center column padding-20">
+        <ServiceEnquiry
+          contactNumber="03 9314 6957"
+          service="Airfares & Featured Flights"
+        />
+        {/* <div className="center column padding-20">
           <div className="padding-20">
             <TextField
               select
@@ -109,7 +114,7 @@ class FeaturedFlightsPage extends React.Component {
         </h1>
         <div className="featuredflightspage-container margin-bottom-50">
           {filteredFlights}
-        </div>
+        </div> */}
       </PageWrapper>
     );
   }
